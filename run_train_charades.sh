@@ -1,0 +1,19 @@
+python trainval_net.py \
+        --dataset=charades \
+        --net=vgg16 \
+        --bs=8 \
+        --nw=1 \
+        --lr=0.0001\
+        --lr_decay_step=10 \
+        --lr_decay_gamma=0.5 \
+        --act_cls_wt=0.0 \
+        --obj_cls_wt=1.0 \
+        --save_dir=trained_models/panet_obj_loss_kpsel_vgg16_lre-4_decaystep10/ \
+        --use_tfboard=1 \
+        --tfboard_path=panet_obj_loss_kpsel_vgg16_lre-4_decaystep10 \
+        --r 0 \
+        --load_dir=trained_models/panet_vgg_obj_loss_upbd_lre-6_decaystep10 \
+        --checksession 1\
+        --checkepoch 10\
+        --checkpoint 10890 \
+        --cuda
